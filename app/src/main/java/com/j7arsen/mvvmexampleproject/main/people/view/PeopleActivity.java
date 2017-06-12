@@ -7,6 +7,7 @@ import com.j7arsen.mvvmexampleproject.R;
 import com.j7arsen.mvvmexampleproject.base.BaseActivity;
 import com.j7arsen.mvvmexampleproject.databinding.ActivityPeopleBinding;
 import com.j7arsen.mvvmexampleproject.dataclasses.People;
+import com.j7arsen.mvvmexampleproject.di.components.ActivityComponent;
 import com.j7arsen.mvvmexampleproject.main.people.IPeopleContract;
 import com.j7arsen.mvvmexampleproject.main.people.adapter.adapter.PeopleItemAdapter;
 import com.j7arsen.mvvmexampleproject.main.peopledetail.view.PeopleDetailActivity;
@@ -43,8 +44,8 @@ public class PeopleActivity extends BaseActivity<ActivityPeopleBinding, IPeopleC
     }
 
     @Override
-    protected void setupComponent() {
-        activityComponent().inject(this);
+    protected void inject(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
     }
 
     @Override

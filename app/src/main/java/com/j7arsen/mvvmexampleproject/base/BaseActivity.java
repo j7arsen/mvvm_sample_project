@@ -56,10 +56,10 @@ public abstract class BaseActivity<B extends ViewDataBinding, V extends IMvvmVie
             configPersistentComponent = sComponentsArray.get(mActivityId);
         }
         mActivityComponent = configPersistentComponent.activityComponent(new ActivityModule(this));
-        setupComponent();
+        inject(mActivityComponent);
     }
 
-    protected abstract void setupComponent();
+    protected abstract void inject(ActivityComponent activityComponent);
 
     /* Sets the content view, creates the binding and attaches the view to the view model */
     protected final void setAndBindContentView(@Nullable Bundle savedInstanceState, @LayoutRes int layoutResID) {

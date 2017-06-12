@@ -60,10 +60,10 @@ public abstract class BaseFragment<B extends ViewDataBinding, V extends IMvvmVie
             configPersistentComponent = sComponentsArray.get(mFragmentId);
         }
         mFragmentComponent = configPersistentComponent.fragmentComponent(new FragmentModule(this));
-        setupComponent();
+        inject(mFragmentComponent);
     }
 
-    protected abstract void setupComponent();
+    protected abstract void inject(FragmentComponent fragmentComponent);
 
     /* Sets the content view, creates the binding and attaches the view to the view model */
     protected final View setAndBindContentView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState, @LayoutRes int layoutResID) {

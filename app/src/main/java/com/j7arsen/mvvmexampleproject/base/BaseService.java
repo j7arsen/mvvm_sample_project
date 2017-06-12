@@ -37,6 +37,8 @@ public abstract class BaseService extends Service {
         return null;
     }
 
+    protected abstract void inject(ServiceComponent serviceComponent);
+
     @Override
     public void onDestroy() {
         super.onDestroy();

@@ -37,10 +37,10 @@ public abstract class BaseIntentService extends IntentService {
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        setupComponent();
+        inject(serviceComponent());
     }
 
-    protected abstract void setupComponent();
+    protected abstract void inject(ServiceComponent serviceComponent);
 
     @Override
     public void onDestroy() {

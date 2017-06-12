@@ -9,6 +9,7 @@ import com.j7arsen.mvvmexampleproject.R;
 import com.j7arsen.mvvmexampleproject.base.BaseViewHolder;
 import com.j7arsen.mvvmexampleproject.databinding.ItemPeopleBinding;
 import com.j7arsen.mvvmexampleproject.dataclasses.People;
+import com.j7arsen.mvvmexampleproject.di.components.ViewHolderComponent;
 import com.j7arsen.mvvmexampleproject.di.scopes.PerActivity;
 import com.j7arsen.mvvmexampleproject.main.people.adapter.IPeopleItemContract;
 

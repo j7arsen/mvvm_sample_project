@@ -9,6 +9,7 @@ import com.j7arsen.mvvmexampleproject.R;
 import com.j7arsen.mvvmexampleproject.base.BaseActivity;
 import com.j7arsen.mvvmexampleproject.databinding.ActivityDetailBinding;
 import com.j7arsen.mvvmexampleproject.dataclasses.People;
+import com.j7arsen.mvvmexampleproject.di.components.ActivityComponent;
 import com.j7arsen.mvvmexampleproject.main.peopledetail.IPeopleDetailContract;
 
 import org.parceler.Parcels;
@@ -47,7 +48,7 @@ public class PeopleDetailActivity extends BaseActivity<ActivityDetailBinding, IP
     }
 
     @Override
-    protected void setupComponent() {
-        activityComponent().inject(this);
+    protected void inject(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
     }
 }

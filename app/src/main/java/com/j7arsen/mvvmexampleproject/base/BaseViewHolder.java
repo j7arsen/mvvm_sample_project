@@ -13,6 +13,7 @@ import com.j7arsen.mvvmexampleproject.base.contract.IMvvmViewModel;
 import com.j7arsen.mvvmexampleproject.base.viewmodel.EmptyViewModel;
 import com.j7arsen.mvvmexampleproject.di.components.ConfigPersistentComponent;
 import com.j7arsen.mvvmexampleproject.di.components.DaggerConfigPersistentComponent;
+import com.j7arsen.mvvmexampleproject.di.components.ServiceComponent;
 import com.j7arsen.mvvmexampleproject.di.components.ViewHolderComponent;
 import com.j7arsen.mvvmexampleproject.di.modules.ViewHolderModule;
 
